@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140609193423) do
+ActiveRecord::Schema.define(:version => 20240828003919) do
 
   create_table "appearances", :force => true do |t|
     t.integer  "voter_id"
@@ -79,6 +79,7 @@ ActiveRecord::Schema.define(:version => 20140609193423) do
     t.string   "data"
     t.integer  "creator_id"
     t.integer  "version"
+    t.integer  "flag"
   end
 
   add_index "choices", ["creator_id"], :name => "index_choices_on_creator_id"

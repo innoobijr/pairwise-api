@@ -30,7 +30,6 @@ GEM
     ey_config (0.0.6)
     factory_girl (1.2.3)
     fakeweb (1.2.5)
-    fastercsv (1.5.1)
     formtastic (0.2.5)
     gherkin (2.5.4)
       json (>= 1.4.6)
@@ -127,4 +126,4 @@ DEPENDENCIES
   yfactorial-utility_scopes (= 0.2.2)
 
 BUNDLED WITH
-   1.16.0
+   1.17.3
