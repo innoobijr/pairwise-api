@@ -49,7 +49,8 @@ class ChoicesController < InheritedResources::Base
   end
 
   def create
-    
+    logger.debug "\t\t-----Am I failing here? -----"
+ 
     visitor_identifier = params[:choice].delete(:visitor_identifier)
 
     visitor = current_user.default_visitor 
