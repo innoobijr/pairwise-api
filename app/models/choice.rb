@@ -52,12 +52,14 @@ class Choice < ActiveRecord::Base
   end
   
   def before_create
+    logger.debug "\t\t ------- tracing choice creastion ----- "
     unless self.score
       self.score = 50.0
     end
     unless self.active?
      #puts "this choice was not specifically set to active, so we are now asking if we should auto-activate"
       self.active = question.should_autoactivate_ideas? ? true : false
+      logger.debug "\t\t ------- question activate ideas ----"
       #puts "should question autoactivate? #{question.should_autoactivate_ideas?}"
       #puts "will this choice be active? #{self.active}"
     end

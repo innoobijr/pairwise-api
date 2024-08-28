@@ -64,7 +64,10 @@ class ChoicesController < InheritedResources::Base
 
 
     @choice = Choice.new(params[:choice])
+    
+    logger.debug "\t\t\t ---- After new ----" + Choice.inspect
     create!
+    logger.debug "\t\t\t -- Sucessful create"
   end
   
   def flag
